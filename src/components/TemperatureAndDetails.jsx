@@ -27,7 +27,7 @@ const TemperatureAndDetails = ({ weather: {
             flex
             flex-row
             items-center
-            justify-between
+            justify-around
             text-white
             py-6
             '>
@@ -99,58 +99,64 @@ const TemperatureAndDetails = ({ weather: {
             text-sm
             py-3
             ' >
-                <UilSun />
-                <p className='
-                
-                font-light
-                '>Rise:
-                    <span className='
-                    font-medium
-                    ml-1
-                    ' >
-                        {formatToLocalTime(sunrise, timezone, "hh:mm a")}
-                    </span>
-                </p>
-                <p className='font-light' >|</p>
-                <UilSunset />
-                <p className='
-                
-                font-light
-                '>Set:
-                    <span className='
-                    font-medium
-                    ml-1
-                    ' >
-                        {formatToLocalTime(sunset, timezone, "hh:mm a")}
-                    </span>
-                </p>
-                <p className='font-light' >|</p>
-                <UilSunset />
-                <p className='
-                
-                font-light
-                '>High:
-                    <span className='
-                    font-medium
-                    ml-1
-                    ' >
-                        {`${temp_max.toFixed()}°`}
-                    </span>
-                </p>
-                <p className='font-light' >|</p>
-                <UilSunset />
-                <p className='
-                
-                font-light
-                '>Low:
-                    <span className='
-                    font-medium
-                    ml-1
-                    ' >
-                        {`${temp_min.toFixed()}°`}
-                    </span>
-                </p>
-                <p className='font-light' >|</p>
+                <div className='flex'>
+                    <div className='block sm:flex sm:flex-row space-x-2'>
+                        <UilSun className="hidden sm:block" />
+                        <p className='
+                    
+                        font-light
+                        '>Rise:
+                            <span className='
+                            font-medium
+                            ml-1
+                            ' >
+                                {formatToLocalTime(sunrise, timezone, "hh:mm a")}
+                            </span>
+                        </p>
+                        <p className='font-light hidden sm:inline' >|</p>
+                        <UilSunset className="hidden sm:block" />
+                        <p className='
+                    
+                        font-light
+                        '>Set:
+                            <span className='
+                            font-medium
+                            ml-1
+                            ' >
+                                {formatToLocalTime(sunset, timezone, "hh:mm a")}
+                            </span>
+                        </p>
+                        <p className='font-light hidden sm:inline' >|</p>
+                    </div>
+                    <div className='block sm:flex sm:justify-end sm:flex-row space-x-10 sm:space-x-2'>
+                        <UilSunset className="hidden sm:block" />
+                        <p className='
+                    
+                        font-light
+                        '>High:
+                            <span className='
+                            font-medium
+                            ml-1
+                            ' >
+                                {`${temp_max.toFixed()}°`}
+                            </span>
+                        </p>
+                        <p className='font-light hidden sm:inline' >|</p>
+                        <UilSunset className="hidden sm:block" />
+                        <p className='
+                    
+                        font-light
+                        '>Low:
+                            <span className='
+                            font-medium
+                            ml-1
+                            ' >
+                                {`${temp_min.toFixed()}°`}
+                            </span>
+                        </p>
+                        <p className='font-light hidden sm:inline' >|</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

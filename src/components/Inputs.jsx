@@ -39,7 +39,12 @@ const Inputs = ({ setQuery, units, setUnits }) => {
 
     return (
         <div className='
-      flex
+        mx-5
+        
+        column
+        sm:max-w-lg
+        sm:mx-auto
+      sm:flex
       flex-row
       justify-center
       my-6
@@ -47,10 +52,12 @@ const Inputs = ({ setQuery, units, setUnits }) => {
             <div className='
             flex
             flex-row
-            w-3/4
+            w-full
             items-center
             justify-center
-            space-x-4
+            sm:justify-end
+            sm:space-x-4
+            
             '>
                 <input
                     onKeyDown={(e) => { handleKeyPresed(e) }}
@@ -62,32 +69,91 @@ const Inputs = ({ setQuery, units, setUnits }) => {
                 text-xl
                 font-light
                 p-2
+                
                 w-full
+                sm:w-full
                 shadow-xl
                 capitalize
                 focus:outline-none
                 placeholder:lowercase
                 '/>
                 <UilSearch size={25} className="
+                ml-5
                 text-white
                 cursor-pointer
                 transition ease-out
+                scale-150
+                sm:scale-100
                 hover:scale-125 
                 "
                     onClick={handleSearchClick}
                 />
                 <UilLocationPoint size={25} className="
+                hidden
                 text-white
                 cursor-pointer
                 transition ease-out
+                scale-150
+                sm:scale-100
                 hover:scale-125   
                 "
                     onClick={handleLocationClick}
                 />
             </div>
-            <div className='
+            <div className='sm:hidden mt-5 flex '>
+                <UilLocationPoint size={25} className="
+                    text-white
+                    cursor-pointer
+                    transition ease-out
+                    scale-150
+                    sm:scale-100
+                    hover:scale-125
+                    "
+                    onClick={handleLocationClick}
+                />
+                <div className='
             flex
             flex-row
+            sm:hidden
+            w-1/4
+            items-center
+            justify-center
+            ' >
+                    <button
+                        name='metric'
+                        className='
+                text-xl
+                text-white
+                font-light
+                transition ease-out
+                hover:scale-125
+                '
+                        onClick={handleUnitsChange}
+                    >°C</button>
+                    <p
+                        className='
+                text-xl
+                text-white
+                mx-1 
+                '
+                    >|</p>
+                    <button
+                        name='imperial'
+                        className='
+                text-xl
+                text-white
+                font-light
+                transition ease-out
+                hover:scale-125 
+                '
+                        onClick={handleUnitsChange}
+                    >°F</button>
+                </div>
+            </div>
+            <div className='
+            hidden
+            sm:flex
+            sm:flex-row
             w-1/4
             items-center
             justify-center
