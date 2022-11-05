@@ -45,6 +45,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
             space-x-4
             '>
                 <input
+                    onKeyDown={(e) => { handleSearchClick() }}
                     value={city}
                     onChange={(e) => setCity(e.currentTarget.value)}
                     type="text"
