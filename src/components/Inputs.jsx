@@ -90,6 +90,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
                 />
                 <UilLocationPoint size={25} className="
                 hidden
+                sm:block
                 text-white
                 cursor-pointer
                 transition ease-out
