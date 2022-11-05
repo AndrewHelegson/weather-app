@@ -3,7 +3,7 @@ import { iconUrlFromCode } from './Services/weatherServices'
 
 const Forecast = ({ title, items }) => {
     return (
-        <div className='sm:max-w-lg sm:mx-auto'>
+        <div className='mx-5 sm:max-w-lg sm:mx-auto'>
             <div className='
       flex
       items-center
@@ -35,7 +35,7 @@ const Forecast = ({ title, items }) => {
                         font-light
                         text-sm
                         '>
-                            {item.title}
+                            {item.titile}
                         </p>
                         <img src={iconUrlFromCode(item.icon)}
                             alt="weather"

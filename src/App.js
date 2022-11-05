@@ -58,7 +58,7 @@ function App() {
         </div>
       )}
 
-      <ToastContainer autoClose={1500} theme="colored" newestOnTop={true} />
+      <ToastContainer className={'hidden'} autoClose={1500} theme="colored" newestOnTop={true} />
     </div>
   );
 }
