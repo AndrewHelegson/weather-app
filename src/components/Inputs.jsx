@@ -8,6 +8,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
         const key = e.key;
         if (key === "Enter") {
             handleSearchClick(e)
+            setCity("")
         }
     }
 
