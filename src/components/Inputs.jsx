@@ -4,6 +4,13 @@ import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons'
 const Inputs = ({ setQuery, units, setUnits }) => {
     const [city, setCity] = useState("")
 
+    const handleKeyPresed = (e) => {
+        const key = e.key;
+        if (key === "Enter") {
+            handleSearchClick(e)
+        }
+    }
+
     const handleUnitsChange = (e) => {
         const selectedUnit = e.currentTarget.name
         if (units !== selectedUnit) setUnits(selectedUnit)
@@ -45,7 +52,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
             space-x-4
             '>
                 <input
-                    onKeyDown={(e) => { handleSearchClick() }}
+                    onKeyDown={(e) => { handleKeyPresed(e) }}
                     value={city}
                     onChange={(e) => setCity(e.currentTarget.value)}
                     type="text"
