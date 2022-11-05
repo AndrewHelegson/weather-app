@@ -58,7 +58,7 @@ function App() {
         </div>
       )}
 
-      <ToastContainer className={'hidden'} autoClose={1500} theme="colored" newestOnTop={true} />
+      <ToastContainer className={'hidden sm:block'} autoClose={1500} theme="colored" newestOnTop={true} />
     </div>
   );
 }
