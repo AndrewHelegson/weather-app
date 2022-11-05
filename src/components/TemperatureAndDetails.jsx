@@ -12,7 +12,7 @@ const TemperatureAndDetails = ({ weather: {
     details, icon, temp, temp_min, temp_max, sunrise, sunset, speed, humidity, feels_like, timezone
 } }) => {
     return (
-        <div>
+        <div className='sm:max-w-lg sm:mx-auto'>
             <div className='
             flex
             items-center

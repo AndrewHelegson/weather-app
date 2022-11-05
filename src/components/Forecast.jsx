@@ -3,7 +3,7 @@ import { iconUrlFromCode } from './Services/weatherServices'
 
 const Forecast = ({ title, items }) => {
     return (
-        <div>
+        <div className='sm:max-w-lg sm:mx-auto'>
             <div className='
       flex
       items-center
