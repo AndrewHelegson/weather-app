@@ -3,6 +3,29 @@ import { DateTime } from "luxon";
 const API_KEY = "795267c2b938bc1dbd3d1dd865eea333"
 const BASE_URL = "https://api.openweathermap.org/data/2.5"
 
+export const cities = [
+    {
+        id: 1,
+        title: "London",
+    },
+    {
+        id: 2,
+        title: "Sydney",
+    },
+    {
+        id: 3,
+        title: "Tokyo",
+    },
+    {
+        id: 4,
+        title: "Toronto",
+    },
+    /* {
+        id: 5,
+        title: "Paris",
+    }, */
+];
+
 const getWeatherData = (infoType, searchParams) => {
     const url = new URL(BASE_URL + "/" + infoType)
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY })

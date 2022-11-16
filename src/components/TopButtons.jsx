@@ -1,38 +1,18 @@
 import React from "react";
+/* import { cities } from "./Services/weatherServices"; */
 
-function TopButtons({ setQuery }) {
-    const cities = [
-        {
-            id: 1,
-            title: "London",
-        },
-        {
-            id: 2,
-            title: "Sydney",
-        },
-        {
-            id: 3,
-            title: "Tokyo",
-        },
-        {
-            id: 4,
-            title: "Toronto",
-        },
-        {
-            id: 5,
-            title: "Paris",
-        },
-    ];
+function TopButtons({ setQuery,citiesData }) {
+
 
     return (
         <div className="sm:max-w-lg sm:mx-auto hidden sm:flex items-center justify-around my-6">
-            {cities.map((city) => (
+            {citiesData.slice(-5).map((city,i) => (
                 <button
-                    key={city.id}
+                    key={`${city}-${i}`}
                     className="text-white text-lg font-medium"
-                    onClick={() => setQuery({ q: city.title })}
+                    onClick={() => setQuery({ q: city })}
                 >
-                    {city.title}
+                    {city}
                 </button>
             ))}
         </div>

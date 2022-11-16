@@ -24,9 +24,9 @@ const Forecast = ({ title, items }) => {
             justify-between
             text-white
             ' >
-                {items.map(item => (
+                {items.map((item,i) => (
 
-                    <div key={item.temp} className='
+                    <div key={`${item.temp}-${i}`} className='
                     flex
                     flex-col
                     items-center
