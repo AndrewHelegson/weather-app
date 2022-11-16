@@ -62,6 +62,7 @@ function App() {
           <div className='flex mt-4 justify-center'><a href="https://github.com/AndrewHelegson/weather-app">
             <p className='font-bold'>Source code on Github</p>
           </a></div>
+          //
         </div>
       )}
       <ToastContainer className={'hidden sm:block'} autoClose={1500} theme="colored" newestOnTop={true} />
